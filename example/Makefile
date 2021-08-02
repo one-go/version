@@ -9,9 +9,9 @@ ifneq ($(strip $(shell git status -s)),)
   Version := ${Version}-dirty
 endif
 
-LDFLAGS=-ldflags "-X 'git.woa.com/rio/version.Name=${Name}' -X 'git.woa.com/rio/version.Version=${Version}' -X 'git.woa.com/rio/version.CommitID=${CommitID}' -X 'git.woa.com/rio/version.LastCommitTime=${LastCommitTime}'"
+LDFLAGS=-ldflags "-X 'github.com/one-go/version.Name=${Name}' -X 'github.com/one-go/version.Version=${Version}' -X 'github.com/one-go/version.CommitID=${CommitID}' -X 'github.com/one-go/version.LastCommitTime=${LastCommitTime}'"
 
 build:
 	go build ${LDFLAGS} -o ${Name}
 test:
-	go test -cover ./...
+	go test -cover

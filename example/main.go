@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"git.woa.com/rio/version"
+	"github.com/one-go/version"
 )
 
 func main() {
